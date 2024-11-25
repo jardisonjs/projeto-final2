@@ -1,0 +1,26 @@
+
+    <h1 class="text-center">Cadastro de Funcionários</h1>
+    <form action="/veterinarios/store" method="post">
+
+        {{!-- CAMPO 2: SALÁRIO E CARGO --}}
+        <section class="row mb-2">
+            <div class="col-md-6">
+                <label for="nome">nome</label>
+                <input type="text" name="nome" id="nome" class="form-control">
+            </div>
+
+            <div class="col-md-6">
+                <label for="contato">contato</label>
+                <input type="integer" name="contato" id="contato" class="form-control">
+            </div>
+
+              <div class="col-md-6">
+                <label for="especialidade">especialidade</label>
+                <input type="text" name="especialidade" id="especialidade" class="form-control">
+            </div>
+
+        {{!-- CAMPO 4: BOTÃO DE CADASTRAR --}}
+        <section class="mb-2 d-flex justify-content-end">
+            <button class="btn btn-success" type="submit">Cadastrar</button>
+        </section>
+    </form>

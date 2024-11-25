@@ -1,0 +1,41 @@
+<section class="container">
+    <h1 class="text-center">Atendimento</h1>
+    <form action="/atendimento/store" method="post">
+
+        {{!-- CAMPO 2: SALÁRIO E CARGO --}}
+        <section class="row mb-2">
+            <div class="col-md-6">
+                <label for="nome">Nome do animal</label>
+                <input type="text" name="animal" id="animal" class="form-control">
+            </div>
+
+            <div class="col-md-6">
+                <label for="data">data</label>
+                <input type="date" name="data" id="data" class="form-control">
+            </div>
+
+            <div class="col-md-6">
+                <label for="preco">Valor do atendimento:</label>
+                <input type="float" name="preco" id="preco" class="form-control">
+            </div>
+
+      
+        </section>
+        {{!-- CAMPO 3 - SELECIONAR CÓDIGO DO DEPARTAMENTO --}}
+               <section class="mb-2">
+            <label for="tipo_atendimento">atendimento</label>
+            <select name="tipo_atendimento" id="tipo_atendimento" class="form-select">
+                <option value="">Escolha uma opção...</option>
+                {{#each dados}}
+                <option value="{{dataValues.especialidade}}">{{dataValues.especialidade}}</option>
+                {{/each}}
+            </select>
+
+        </section>
+
+        {{!-- CAMPO 4: BOTÃO DE CADASTRAR --}}
+        <section class="mb-2 d-flex justify-content-end">
+            <button class="btn btn-succsess" type="submit">Cadastrar</button>
+        </section>
+    </form>
+</section>

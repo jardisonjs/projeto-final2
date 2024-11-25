@@ -1,0 +1,29 @@
+<section class="my-4">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>contato</th>
+                <th>especialidade</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{#each dados}}
+            <tr>
+                <td>{{dataValues.id}}</td>
+                <td>{{dataValues.nome}}</td>
+                <td>{{dataValues.contato}}</td>
+                <td>{{dataValues.especialidade}}</td>
+                <td>
+                    <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal{{dataValues.id}}">Excluir</a>
+                    {{>modalDelete idItem=dataValues.id}}
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+
+    </table>
+</section>

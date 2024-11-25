@@ -1,0 +1,34 @@
+<section class="my-4">
+    <h2>Consultas agendadas</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>animal</th>
+                <th>data_atendimento</th>
+                <th>preço</th>
+                <th>tipo_atendimento</th>
+                <th>ação</th>
+            </tr>
+        </thead>
+
+        <tbody> {{!-- o each é um recurso do handlebars que permite que tags sejam repetidas, ele funciona como uma estrutura de repetição --}}
+            
+            {{#each dados}}
+            <tr>
+                <td>{{dataValues.animal}}</td>
+                <td>{{dataValues.data}}</td>
+                <td>{{dataValues.preco}}</td>
+                <td>{{dataValues.tipo_atendimento}}</td>
+                <td>
+                    <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal{{dataValues.id}}">Excluir</a>
+                    {{>modalDelete2 idItem= dataValues.id}}
+                </td>
+            </tr>
+            
+            
+
+            {{/each}}
+        </tbody>
+
+    </table>
+    </section>
